@@ -4,7 +4,7 @@ What is the 10 001st prime number?"""
 
 def is_prime(x):
 	if x > 2:
-		for i in range(2,x-1):
+		for i in range(2,int(x**0.5)+1):
 			if x % i == 0:
 				return False
 		return True
@@ -13,13 +13,13 @@ def is_prime(x):
 	else:
 		return False
 
-i = 0 #iteration
-x = 1 #number being tested
+i = 1 #iteration
+x = 3 #number being tested
 nth = 10001 #target nth prime number
 while i < nth:
 	if is_prime(x) == True:
 		i += 1
 		if i == nth:
 			print (x)
-	x += 1
+	x += 2
 	
